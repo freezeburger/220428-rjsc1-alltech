@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ClassComponent from "./theory/1.ClassComponent";
+import FunctionalComponent from "./theory/1.FunctionalComponent";
+import FunctionalComponentWithMechanics from "./theory/1.FunctionalComponentWithMechanics";
+import FunctionalFecth from "./theory/2.FunctionalFecth";
+import FunctionalWithHooks from "./theory/3.CustomHooks/FunctionalWithHooks";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/*       
+      <ClassComponent></ClassComponent>
+      <FunctionalComponent></FunctionalComponent>
+      <FunctionalComponentWithMechanics/>
+      <FunctionalFecth id={1}/> 
+      */}
+      <FunctionalWithHooks id={1}/> 
+      </>
   );
 }
 

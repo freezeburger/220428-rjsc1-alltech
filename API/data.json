@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John"
+    },
+    {
+      "id": 2,
+      "name": "Jane"
+    },
+    {
+      "id": 3,
+      "name": "Jack"
+    },
+    {
+      "name": "Bob",
+      "id": 4
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "text": "Hello",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "text": "Hi",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "text": "How are you?",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "text": "I'm fine",
+      "userId": 2
+    },
+    {
+      "id": 5,
+      "text": "And you?",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "text": "I'm fine too",
+      "userId": 2
+    }
+  ]
+}
