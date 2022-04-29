@@ -13,7 +13,9 @@ const ViewHome = () => (
       </LayoutDefault.Header>
 
       <LayoutDefault.Main>
-        MAIN CONTENT
+        MAIN CONTENT Features !!
+
+        Container > Features
       </LayoutDefault.Main>
 
       <LayoutDefault.Footer>

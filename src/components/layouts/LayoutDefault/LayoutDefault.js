@@ -6,6 +6,8 @@ import { BaseFooter, BaseHeader, BaseMain, useMediaQuery } from '../../base';
 
 const LayoutDefault = ({ children }) => {
 
+  const screenWide = useMediaQuery('(min-width:1024px)');
+
   const header = children.find(child => child.type === LayoutDefault.Header)?.props.children;
   const main = children.find(child => child.type === LayoutDefault.Main)?.props.children;
   const footer = children.find(child => child.type === LayoutDefault.Footer)?.props.children;
@@ -18,7 +20,7 @@ const LayoutDefault = ({ children }) => {
       }
       <BaseMain> {main} </BaseMain>
       {
-        footer && <BaseFooter>{footer} </BaseFooter>
+        screenWide && footer && <BaseFooter>{footer} </BaseFooter>
       }
     </>
   );
