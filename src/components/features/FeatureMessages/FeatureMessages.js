@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import './FeatureMessages.css';
 
 import store from '../../../core/store';
-import { ActionTypes } from '@mui/base';
+import { ActionTypes } from '../../../core/store/actions';
+
 
 console.warn(store)
 
