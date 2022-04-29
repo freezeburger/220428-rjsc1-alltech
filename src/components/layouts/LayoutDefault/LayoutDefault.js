@@ -7,16 +7,15 @@ import { BaseButton, BaseFooter, BaseHeader, BaseMain, BaseInputGeneric, BaseInp
 
 const LayoutDefault = ({ children }) => {
 
-  const header = children.find(child => child.type === LayoutDefault.Header)
-  const main = children.find(child => child.type === LayoutDefault.Main)
-  const footer = children.find(child => child.type === LayoutDefault.Footer)
+  const header = children.find(child => child.type === LayoutDefault.Header)?.props.children;
+  const main = children.find(child => child.type === LayoutDefault.Main)?.props.children;
+  const footer = children.find(child => child.type === LayoutDefault.Footer)?.props.children;
 
-  console.log(header)
 
   return (
     <>
       {
-      header && <BaseHeader> {header} </BaseHeader>
+      header && <BaseHeader> {header.children} </BaseHeader>
       }
       <BaseMain> {main} </BaseMain>
       {
