@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './FeatureMessages.css';
 
 import store from '../../../core/store';
+import { ActionTypes } from '@mui/base';
 
 console.warn(store)
 
@@ -18,6 +19,12 @@ const FeatureMessages = () =>{
   return (
   <div className="FeatureMessages" data-testid="FeatureMessages">
     FeatureMessages Component
+    <button onClick={ ()=> store.dispacth({
+      type: ActionTypes.MESSAGE_CREATION_SUCCESS,
+      payload: { text:'Hello World' , date:Date.now()}
+    })}>
+      Add Message
+      </button>
     <br />
     {JSON.stringify(localState)}
   </div>
