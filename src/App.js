@@ -1,9 +1,9 @@
-import {ViewHome} from "./components/views";
+import {ViewHome, ViewMessages} from "./components/views";
 
 function App() {
   return (
     <>
-      <ViewHome></ViewHome>
+      <ViewMessages></ViewMessages>
     </>
   );
 }
