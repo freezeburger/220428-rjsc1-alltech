@@ -15,7 +15,7 @@ const LayoutDefault = ({ children }) => {
   return (
     <>
       {
-      header && <BaseHeader> {header.children} </BaseHeader>
+      header && <BaseHeader> {header} </BaseHeader>
       }
       <BaseMain> {main} </BaseMain>
       {
