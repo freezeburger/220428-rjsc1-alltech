@@ -1,6 +1,6 @@
 
 import { legacy_createStore } from "redux";
-import { mainReducer } from "./logic/reducers";
+import { mainReducer } from "./reducers";
 
 
 const store = legacy_createStore(mainReducer);
