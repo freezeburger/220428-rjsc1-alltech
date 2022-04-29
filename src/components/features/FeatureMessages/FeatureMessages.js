@@ -19,7 +19,7 @@ const FeatureMessages = () =>{
   return (
   <div className="FeatureMessages" data-testid="FeatureMessages">
     FeatureMessages Component
-    <button onClick={ ()=> store.dispacth({
+    <button onClick={ ()=> store.dispatch({
       type: ActionTypes.MESSAGE_CREATION_SUCCESS,
       payload: { text:'Hello World' , date:Date.now()}
     })}>
