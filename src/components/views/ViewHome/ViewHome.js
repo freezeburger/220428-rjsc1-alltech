@@ -6,7 +6,21 @@ import LayoutDefault from '../../layouts';
 
 const ViewHome = () => (
   <>
-    <LayoutDefault></LayoutDefault>
+    <LayoutDefault>
+
+      <LayoutDefault.Header>
+          HEADER CONTENT
+      </LayoutDefault.Header>
+
+      <LayoutDefault.Main>
+        MAIN CONTENT
+      </LayoutDefault.Main>
+
+      <LayoutDefault.Footer>
+        FOOTER CONTENT
+      </LayoutDefault.Footer>
+    
+    </LayoutDefault>
   </>
 );
 
