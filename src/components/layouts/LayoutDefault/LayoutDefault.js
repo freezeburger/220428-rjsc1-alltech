@@ -4,7 +4,7 @@ import './LayoutDefault.css';
 import { BaseFooter, BaseHeader, BaseMain, useMediaQuery } from '../../base';
 
 
-const LayoutDefault = ({ children }) => {
+const LayoutDefault = ({ children,responsive }) => {
 
   const screenWide = useMediaQuery('(min-width:1024px)');
 
@@ -20,7 +20,7 @@ const LayoutDefault = ({ children }) => {
       }
       <BaseMain> {main} </BaseMain>
       {
-        screenWide && footer && <BaseFooter>{footer} </BaseFooter>
+        responsive && screenWide && footer && <BaseFooter>{footer} </BaseFooter>
       }
     </>
   );
@@ -34,6 +34,8 @@ LayoutDefault.propTypes = {
   // TODO
 };
 
-LayoutDefault.defaultProps = {};
+LayoutDefault.defaultProps = {
+  responsive:true
+};
 
 export default LayoutDefault;
