@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './BaseMain.css';
 
 const BaseMain = ({children:content}) => (
+
+  
   <>
     {content}
   </>
