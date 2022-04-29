@@ -1,33 +1,26 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './FeatureMessages.css';
-
-import store from '../../../core/store';
-import { ActionTypes } from '../../../core/store/actions';
+import { useStore } from '../../../core/utils';
 
 
-console.warn(store)
+
 
 const FeatureMessages = () =>{
 
-  const [ localState, setLocalState] = React.useState( store.getState() );
-
-  useEffect(() => {
-    const unsubscribe = store.subscribe(() => setLocalState( store.getState() ))
-    return () => unsubscribe();
-  } , []);
+  const [appState, dispatch, types] = useStore();
 
   return (
   <div className="FeatureMessages" data-testid="FeatureMessages">
     FeatureMessages Component
-    <button onClick={ ()=> store.dispatch({
-      type: ActionTypes.MESSAGE_CREATION_SUCCESS,
+    <button onClick={ ()=> dispatch({
+      type: types.MESSAGE_CREATION_SUCCESS,
       payload: { text:'Hello World' , date:Date.now()}
     })}>
       Add Message
       </button>
     <br />
-    {JSON.stringify(localState)}
+    {JSON.stringify(appState)}
   </div>
 )}
 
