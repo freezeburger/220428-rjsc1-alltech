@@ -15,19 +15,12 @@ const LayoutDefault = ({ children }) => {
 
   return (
     <>
-      {header &&
-        <BaseHeader>
-          {header}
-        </BaseHeader>
-      }
-      <BaseMain>
-        {main}
-      </BaseMain>
       {
-        footer &&
-        <BaseFooter>
-          {footer}
-        </BaseFooter>
+      header && <BaseHeader> {header} </BaseHeader>
+      }
+      <BaseMain> {main} </BaseMain>
+      {
+        footer && <BaseFooter>{footer} </BaseFooter>
       }
     </>
   );
