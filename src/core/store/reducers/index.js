@@ -1,4 +1,4 @@
-import { ActionTypes } from "../../store/actions";
+import { ActionTypes } from "../actions";
 import { State } from "../state";
 
 
