@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './BaseFooter.css';
 
-const BaseFooter = () => (
-  <div className="BaseFooter" data-testid="BaseFooter">
-    BaseFooter Component
-  </div>
+const BaseFooter = (props) => (
+  <>
+    {props.children}
+  </>
 );
 
 BaseFooter.propTypes = {};

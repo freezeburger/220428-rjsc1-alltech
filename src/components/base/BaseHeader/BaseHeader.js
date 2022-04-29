@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './BaseHeader.css';
 
-const BaseHeader = () => (
-  <div className="BaseHeader" data-testid="BaseHeader">
-    BaseHeader Component
-  </div>
+const BaseHeader = ({children:content}) => (
+  <>
+    {content}
+  </>
 );
 
 BaseHeader.propTypes = {};

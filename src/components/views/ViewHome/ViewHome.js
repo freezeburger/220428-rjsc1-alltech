@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import LayoutDefault from '../../layouts';
+
 
 const ViewHome = () => (
-  <div>
-    ViewHome Component
-  </div>
+  <>
+    <LayoutDefault></LayoutDefault>
+  </>
 );
 
 ViewHome.propTypes = {};
