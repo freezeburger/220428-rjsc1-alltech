@@ -5,4 +5,4 @@ import { mainReducer } from "./reducers";
 
 const store = legacy_createStore(mainReducer);
 
-export default {store}
+export default store;

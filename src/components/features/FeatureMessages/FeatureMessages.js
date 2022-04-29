@@ -4,6 +4,8 @@ import './FeatureMessages.css';
 
 import store from '../../../core/store';
 
+console.warn(store)
+
 const FeatureMessages = () =>{
 
   const [ localState, setLocalState] = React.useState( store.getState() );
@@ -16,6 +18,8 @@ const FeatureMessages = () =>{
   return (
   <div className="FeatureMessages" data-testid="FeatureMessages">
     FeatureMessages Component
+    <br />
+    {JSON.stringify(localState)}
   </div>
 )}
 
