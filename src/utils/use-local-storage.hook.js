@@ -15,7 +15,7 @@ const getInitialStorage = ( token, data ) => {
     }
 }
 
-const updataStorageCreator = ( token, setStoredData ) => {
+const updateStorageCreator = ( token, setStoredData ) => {
 
     return  (updatedData) => {
         try {
@@ -31,7 +31,7 @@ const updataStorageCreator = ( token, setStoredData ) => {
 export default function useLocalStorage(token, data = {}) {
     
    const [storedData, setStoredData] = useState(getInitialStorage(token, data));
-   const updateStorage = updataStorageCreator(token,setStoredData);
+   const updateStorage = updateStorageCreator(token,setStoredData);
 
    return [storedData, updateStorage];
 }
