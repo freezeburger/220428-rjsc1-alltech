@@ -8,6 +8,7 @@ import useLocalStorage from '../../../utils/use-local-storage.hook';
 const FeatureMessages = (props) =>{
 
   const {appState, dispatch, types} = props;
+
   const [savedData, updateSavedData] = useLocalStorage('TOKEN_FEATURE_MESSAGES', ['Mr.', 'Mss.']);
 
   return (
@@ -19,7 +20,8 @@ const FeatureMessages = (props) =>{
     <button onClick={ () => updateSavedData([...savedData, 'Miss.'])}>Udpate</button>
 
 
-    FeatureMessages Component
+    FeatureMessages Component :
+    
     <button onClick={ ()=> dispatch({
       type: types.MESSAGE_CREATION_SUCCESS,
       payload: { text:'Hello World' , date:Date.now()}
