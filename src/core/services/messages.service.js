@@ -1,7 +1,6 @@
 
 import { ApiClient } from "../utils/api-client";
 
-
 const messages = [];
 
 export const MessagesService = {
