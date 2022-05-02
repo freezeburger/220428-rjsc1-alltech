@@ -15,6 +15,7 @@ const getInitialStorage = ( token, data ) => {
     }
 }
 
+// Higher Order Function
 const updateStorageCreator = ( token, setStoredData ) => {
 
     return  (updatedData) => {
