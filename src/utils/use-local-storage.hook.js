@@ -20,7 +20,7 @@ export default function useLocalStorage(token, data = {}) {
     
    const [storedData, setStoredData] = useState(getInitialStorage(token, data));
 
-   const setData = (updatedData) => {
+   const updateStorage = (updatedData) => {
     try {
         const value = JSON.stringify(updatedData);
         window.localStorage.setItem(token, value);
@@ -30,5 +30,5 @@ export default function useLocalStorage(token, data = {}) {
     }
 };
 
-   return [storedData, setStoredData];
+   return [storedData, updateStorage];
 }
