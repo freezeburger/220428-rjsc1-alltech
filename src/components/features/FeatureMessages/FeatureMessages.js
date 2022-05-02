@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './FeatureMessages.css';
-import { useStore } from '../../../core/utils';
 
 import useLocalStorage from '../../../utils/use-local-storage.hook';
+import withStore from '../../containers/store.hoc';
 
 
+const FeatureMessages = (props) =>{
 
-
-const FeatureMessages = () =>{
-
-  const [appState, dispatch, types] = useStore();
+  const {appState, dispatch, types} = props;
   const [savedData, updateSavedData] = useLocalStorage('TOKEN_FEATURE_MESSAGES', ['Mr.', 'Mss.']);
 
   return (
@@ -38,4 +36,4 @@ FeatureMessages.propTypes = {};
 
 FeatureMessages.defaultProps = {};
 
-export default FeatureMessages;
+export default withStore(FeatureMessages);
