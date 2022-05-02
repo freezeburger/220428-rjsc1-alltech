@@ -19,7 +19,9 @@ const FeatureMessages = () =>{
     <code>
       { JSON.stringify(savedData) }
     </code>
-    
+    <button onClick={updateSavedData([...savedData, 'Miss.'])}>Udpate</button>
+
+
     FeatureMessages Component
     <button onClick={ ()=> dispatch({
       type: types.MESSAGE_CREATION_SUCCESS,
