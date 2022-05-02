@@ -1,6 +1,5 @@
 const ENDPOINT = process.env.REACT_APP_ENDPOINT;
 
-
 const defaultOptions = {
     method: 'GET',
     headers: {
@@ -11,9 +10,10 @@ const defaultOptions = {
 }
 
 const Stringifier = {
-    set(target, key, value) {  
-        debugger; 
-        if( key === 'body') value = value ? JSON.stringify(value): '';
+    set(target, key, value = '') {  
+        if( key === 'body' && target['method'] !== 'GET' ) value =JSON.stringify(value);
+        if( key === 'method' && value === 'GET' ) delete target['body'];
+
         target[key] = value;
         return true;
     }

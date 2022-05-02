@@ -3,7 +3,7 @@ import {LangContext, setLang} from "./components/containers/lang.context";
 import React from "react";
 import { ApiClient } from "./core/utils";
 
-ApiClient.read().then(console.log)
+ApiClient.read('users').then(console.log)
 
 function App() {
 
