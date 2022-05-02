@@ -15,10 +15,16 @@ export const mainReducer = (state = State, action) => {
                 ...state,
                 messages: [...state.messages, action.payload]
             }
+        case ActionTypes.MESSAGE_LIST_UPDATE_REQUEST:
+            return {
+                ...state,
+                isLoading: true
+            }
         case ActionTypes.MESSAGE_LIST_UPDATE_SUCCESS:
             return {
                 ...state,
-                messages: action.payload
+                messages: action.payload,
+                isLoading: false
             }
         case ActionTypes.MESSAGE_LIST_UPDATE_AUTO:
             return {

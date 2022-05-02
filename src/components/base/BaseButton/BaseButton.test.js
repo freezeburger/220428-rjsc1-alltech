@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import BaseButton from './BaseButton';
 
-fdescribe('<BaseButton />', () => {
+describe.only('<BaseButton />', () => {
   test('it should mount', () => {
     render(<BaseButton />);
     

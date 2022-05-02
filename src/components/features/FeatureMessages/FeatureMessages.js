@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import './FeatureMessages.css';
 
@@ -9,18 +9,18 @@ import { LangContext } from '../../containers/lang.context';
 const FeatureMessages = (props) =>{
 
   const {appState, dispatch, types} = props;
-  const {messages} = useContext(LangContext);
 
+  const {messages} = useContext(LangContext);
   const [savedData, updateSavedData] = useLocalStorage('TOKEN_FEATURE_MESSAGES', ['Mr.', 'Mss.']);
 
   return (
-  <div className="FeatureMessages" data-testid="FeatureMessages">
+  <div>
 
     <code>
       { JSON.stringify(savedData) }
     </code>
-    <button onClick={ () => updateSavedData([...savedData, 'Miss.'])}>{messages.BUTTON_ADD}</button>
 
+    <button onClick={ () => updateSavedData([...savedData, 'Miss.'])}>{messages.BUTTON_ADD}</button>
 
     <h1>FeatureMessages Component :</h1>
     
@@ -29,9 +29,14 @@ const FeatureMessages = (props) =>{
       payload: null
     })}>
       Refresh Messages
-      </button>
+    </button>
+
     <br />
-    {JSON.stringify(appState)}
+    <ul>
+        {
+          appState.messages.map( (msg, index) => <li key={index}>{msg.text}</li>)
+        }
+    </ul>
   </div>
 )}
 

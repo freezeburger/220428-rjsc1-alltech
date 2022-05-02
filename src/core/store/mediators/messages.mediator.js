@@ -6,7 +6,6 @@ import {actions$} from '../middlewares/action-streamer.middleware';
 
 const observer = ({action, dispatch}) => {
 
-
     if(!action || !action.type) return;
 
     console.log(action)

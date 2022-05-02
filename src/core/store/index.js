@@ -4,7 +4,6 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { actionStreamer } from "./middlewares/action-streamer.middleware";
 import { mainReducer } from "./reducers";
 
-
 import './mediators/messages.mediator';
 
 const store = legacy_createStore(mainReducer,

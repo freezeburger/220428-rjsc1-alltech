@@ -20,6 +20,7 @@ function App() {
               {language === 'fr' ?'English':'Français'}
           </button>
           <br />
+          
           <ViewMessages></ViewMessages>
 
       </LangContext.Provider>
