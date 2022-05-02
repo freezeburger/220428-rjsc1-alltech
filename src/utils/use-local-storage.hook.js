@@ -5,7 +5,6 @@ import { useState } from "react";
 } */
 
 const getInitialStorage = ( token, data ) => {
-
     return () => {
         try {
             const item = window.localStorage.getItem(token);
@@ -16,19 +15,23 @@ const getInitialStorage = ( token, data ) => {
     }
 }
 
+const updataStorageCreator = ( token, setStoredData ) => {
+
+    return  (updatedData) => {
+        try {
+            const value = JSON.stringify(updatedData);
+            window.localStorage.setItem(token, value);
+            setStoredData(updatedData);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
 export default function useLocalStorage(token, data = {}) {
     
    const [storedData, setStoredData] = useState(getInitialStorage(token, data));
-
-   const updateStorage = (updatedData) => {
-    try {
-        const value = JSON.stringify(updatedData);
-        window.localStorage.setItem(token, value);
-        setStoredData(data);
-    } catch (error) {
-        console.log(error);
-    }
-};
+   const updateStorage = updataStorageCreator(token,setStoredData);
 
    return [storedData, updateStorage];
 }
