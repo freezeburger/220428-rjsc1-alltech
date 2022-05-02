@@ -20,7 +20,7 @@ const FeatureMessages = (props) =>{
     <code>
       { JSON.stringify(savedData) }
     </code>
-    <button onClick={ () => updateSavedData([...savedData, 'Miss.'])}>Udpate</button>
+    <button onClick={ () => updateSavedData([...savedData, 'Miss.'])}>{messages.BUTTON_ADD}</button>
 
 
     FeatureMessages Component :
