@@ -24,7 +24,7 @@ const request = (path, options = {}) => {
     return fetch(`${ENDPOINT}/${path}`, requestOptions).then(res =>res.json())
 }
 
-export  const ApiCLient = Object.freeze({
+export  const ApiClient = Object.freeze({
 
     read( path ) {
         return request( path, {method:'GET'} );
