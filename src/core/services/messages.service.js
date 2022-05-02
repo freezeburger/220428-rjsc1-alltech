@@ -9,6 +9,10 @@ export const MessagesService = {
         this.load();
     },
 
+    get(){
+       return messages
+    },
+
     load(){
         ApiClient.read('messages').then(res => {
             messages.push(...res);
