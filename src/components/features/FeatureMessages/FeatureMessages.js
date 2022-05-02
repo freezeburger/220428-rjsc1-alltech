@@ -3,15 +3,23 @@ import PropTypes from 'prop-types';
 import './FeatureMessages.css';
 import { useStore } from '../../../core/utils';
 
+import useLocalStorage from '../../../utils/use-local-storage.hook';
+
 
 
 
 const FeatureMessages = () =>{
 
   const [appState, dispatch, types] = useStore();
+  const [savedData, updateSavedData] = useLocalStorage('TOKEN_FEATURE_MESSAGES', ['Mr.', 'Mss.']);
 
   return (
   <div className="FeatureMessages" data-testid="FeatureMessages">
+
+    <code>
+      { JSON.stringify(savedData) }
+    </code>
+    
     FeatureMessages Component
     <button onClick={ ()=> dispatch({
       type: types.MESSAGE_CREATION_SUCCESS,
