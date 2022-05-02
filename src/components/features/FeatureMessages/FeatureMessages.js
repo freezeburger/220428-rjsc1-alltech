@@ -13,6 +13,8 @@ const FeatureMessages = (props) =>{
   const {messages} = useContext(LangContext);
   const [savedData, updateSavedData] = useLocalStorage('TOKEN_FEATURE_MESSAGES', ['Mr.', 'Mss.']);
 
+  console.log('ULS', useLocalStorage('TOKEN_FEATURE_MESSAGES', ['Mr.', 'Mss.']))
+
   return (
   <div>
 
