@@ -13,7 +13,7 @@ const defaultOptions = {
 const Stringifier = {
     set(target, key, value) {  
         debugger; 
-        if( key === 'body') value = JSON.stringify(value);
+        if( key === 'body') value = value ? JSON.stringify(value): '';
         target[key] = value;
         return true;
     }
