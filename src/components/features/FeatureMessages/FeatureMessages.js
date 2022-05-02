@@ -22,13 +22,13 @@ const FeatureMessages = (props) =>{
     <button onClick={ () => updateSavedData([...savedData, 'Miss.'])}>{messages.BUTTON_ADD}</button>
 
 
-    FeatureMessages Component :
+    <h1>FeatureMessages Component :</h1>
     
     <button onClick={ ()=> dispatch({
-      type: types.MESSAGE_CREATION_SUCCESS,
-      payload: { text:'Hello World' , date:Date.now()}
+      type: types.MESSAGE_LIST_UPDATE_REQUEST,
+      payload: null
     })}>
-      Add Message
+      Refresh Messages
       </button>
     <br />
     {JSON.stringify(appState)}

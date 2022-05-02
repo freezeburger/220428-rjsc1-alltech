@@ -6,7 +6,7 @@ const messages = [];
 export const MessagesService = {
 
     init(){
-        this.load();
+        return this.load();
     },
 
     get(){
@@ -14,18 +14,18 @@ export const MessagesService = {
     },
 
     load(){
-        ApiClient.read('messages').then(res => {
+        return ApiClient.read('messages').then(res => {
             messages.push(...res);
         });
     },
 
     refresh(msg){
         messages.length = 0;
-        this.load();
+        return this.load();
     },
 
     create(msg){
-        ApiClient.create('messages', msg).then(res => {
+        return ApiClient.create('messages', msg).then(res => {
             messages.push(res);
         });
     }
