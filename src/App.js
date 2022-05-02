@@ -2,6 +2,8 @@ import {ViewHome, ViewMessages} from "./components/views";
 import {LangContext, setLang} from "./components/containers/lang.context";
 import React from "react";
 
+ApiC
+
 function App() {
 
   const [language,setLanguage] = React.useState('fr')
