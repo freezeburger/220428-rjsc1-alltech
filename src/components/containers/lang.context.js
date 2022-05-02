@@ -1,3 +1,4 @@
+import React from "react";
 
 const langs = {
     fr:{
@@ -9,3 +10,10 @@ const langs = {
         BUTTON_SEND: "Send",
     }
 }
+
+const setLang = (lang = "fr") => langs[lang] ;
+
+export const  LangContext = React.createContext({
+    lang:setLang(),
+    setLang
+})
