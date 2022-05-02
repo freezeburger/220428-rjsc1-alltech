@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './FeatureMessages.css';
 
 import useLocalStorage from '../../../utils/use-local-storage.hook';
+import { LangContext } from '../../containers/lang.context';
 
 
 const FeatureMessages = (props) =>{
 
   const {appState, dispatch, types} = props;
+  const {messages} = useContext(LangContext);
+  console.log({messages})
 
   const [savedData, updateSavedData] = useLocalStorage('TOKEN_FEATURE_MESSAGES', ['Mr.', 'Mss.']);
 

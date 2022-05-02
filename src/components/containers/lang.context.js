@@ -11,9 +11,9 @@ const langs = {
     }
 }
 
-const setLang = (lang = "fr") => langs[lang] ;
+export const setLang = (lang = "fr") => langs[lang] ;
 
 export const  LangContext = React.createContext({
-    lang:setLang(),
-    setLang
+    messages:setLang()
 })
+LangContext.displayName = "LangContext";

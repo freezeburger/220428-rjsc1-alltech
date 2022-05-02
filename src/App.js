@@ -1,10 +1,10 @@
 import {ViewHome, ViewMessages} from "./components/views";
-import {LangContext} from "./components/containers/lang.context";
+import {LangContext, setLang} from "./components/containers/lang.context";
 
 function App() {
   return (
     <>
-      <LangContext.Provider>
+      <LangContext.Provider value={{messages:setLang()}}>
         <ViewMessages></ViewMessages>
       </LangContext.Provider>
     </>
