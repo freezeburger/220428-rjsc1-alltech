@@ -1,8 +1,9 @@
 import {ViewHome, ViewMessages} from "./components/views";
 import {LangContext, setLang} from "./components/containers/lang.context";
 import React from "react";
+import { ApiClient } from "./core/utils";
 
-ApiC
+ApiClient.read().then(console.log)
 
 function App() {
 

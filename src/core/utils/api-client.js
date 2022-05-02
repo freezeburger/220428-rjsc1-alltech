@@ -11,7 +11,8 @@ const defaultOptions = {
 }
 
 const Stringifier = {
-    set(key, value, target) {   
+    set(target, key, value) {  
+        debugger; 
         if( key === 'body') value = JSON.stringify(value);
         target[key] = value;
         return true;
@@ -19,8 +20,8 @@ const Stringifier = {
 }
 
 const request = (path, options = {}) => {
-    const requestOptions = Object.assign( new Proxy({},Stringifier), defaultOptions, options);
-    debugger;
+    const requestOptions = Object.assign( (new Proxy({},Stringifier)), defaultOptions, options);
+
     return fetch(`${ENDPOINT}/${path}`, requestOptions).then(res =>res.json())
 }
 
