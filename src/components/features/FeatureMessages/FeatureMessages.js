@@ -10,7 +10,6 @@ const FeatureMessages = (props) =>{
 
   const {appState, dispatch, types} = props;
   const {messages} = useContext(LangContext);
-  console.log({messages})
 
   const [savedData, updateSavedData] = useLocalStorage('TOKEN_FEATURE_MESSAGES', ['Mr.', 'Mss.']);
 

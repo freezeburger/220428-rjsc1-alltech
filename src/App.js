@@ -11,12 +11,14 @@ function App() {
       
       <LangContext.Provider value={{messages:setLang( language )}}>
         
-        <br /><br /><br />
-        <button onClick={() => setLanguage( language === 'fr' ?'uk':'fr')}>
-            {language === 'fr' ?'English':'Français'}
-        </button>
-        <br />
-        <ViewMessages></ViewMessages>
+          <br /><br /><br />
+
+          <button onClick={() => setLanguage( language === 'fr' ?'uk':'fr')}>
+              {language === 'fr' ?'English':'Français'}
+          </button>
+          <br />
+          <ViewMessages></ViewMessages>
+
       </LangContext.Provider>
 
     </>
