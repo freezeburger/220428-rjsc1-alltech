@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './FeatureMessages.css';
 
 import useLocalStorage from '../../../utils/use-local-storage.hook';
-import withStore from '../../containers/store.hoc';
 
 
 const FeatureMessages = (props) =>{
@@ -36,4 +35,4 @@ FeatureMessages.propTypes = {};
 
 FeatureMessages.defaultProps = {};
 
-export default withStore(FeatureMessages);
+export default FeatureMessages;
