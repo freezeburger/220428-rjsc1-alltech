@@ -18,6 +18,7 @@ const getInitialStorage = ( token, data ) => {
 const updateStorageCreator = ( token, setStoredData ) => {
 
     return  (updatedData) => {
+        debugger;
         try {
             const value = JSON.stringify(updatedData);
             window.localStorage.setItem(token, value);
@@ -30,7 +31,8 @@ const updateStorageCreator = ( token, setStoredData ) => {
 
 export default function useLocalStorage(token, data = {}) {
     
-   const [storedData, setStoredData] = useState(getInitialStorage(token, data));
+   const [storedData, setStoredData] = useState( getInitialStorage(token, data) );
+
    const updateStorage = updateStorageCreator(token,setStoredData);
 
    return [storedData, updateStorage];
