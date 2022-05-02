@@ -19,4 +19,16 @@ const getInitialStorage = ( token, data ) => {
 export default function useLocalStorage(token, data = {}) {
     
    const [storedData, setStoredData] = useState(getInitialStorage(token, data));
+
+   const setData = (updatedData) => {
+    try {
+        const value = JSON.stringify(updatedData);
+        window.localStorage.setItem(token, value);
+        setStoredData(data);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+   return [storedData, setStoredData];
 }
